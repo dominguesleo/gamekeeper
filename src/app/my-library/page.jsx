@@ -17,7 +17,7 @@ export default function Home() {
             if (gamesId && gamesId.length > 0) {
                 try {
                     const games = await Promise.all(gamesId.map(async ({ id, status }) => {
-                        const response = await fetch(`https://api.rawg.io/api/games/${id}?key=a359d27af5fc427c87fb3af6dd0b91b4`);
+                        const response = await fetch(`https://api.rawg.io/api/games/${id}?key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}`);
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
                         }

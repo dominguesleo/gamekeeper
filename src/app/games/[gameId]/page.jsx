@@ -10,7 +10,7 @@ import './gameid.css'
 
 const DOMPurify = typeof window !== 'undefined' ? require('dompurify')(window) : null;
 
-async function fetchWithRetries(url, retries = 5) {
+async function fetchWithRetries(url, retries = 10) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -28,8 +28,8 @@ async function fetchWithRetries(url, retries = 5) {
     }
 }
 
-async function getGameData(id, retries = 5) {
-    const apiKey = 'a359d27af5fc427c87fb3af6dd0b91b4';
+async function getGameData(id, retries = 10) {
+    const apiKey = `${process.env.NEXT_PUBLIC_RAWG_TOKEN}`;
     const baseUrl = `https://api.rawg.io/api/games/${id}`;
 
     const gameUrl = `${baseUrl}?key=${apiKey}`;

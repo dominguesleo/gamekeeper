@@ -5,10 +5,10 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { Aside } from "@/components/aside/Aside";
 import {ButtonClassic} from '@/components/button/ButtonClassic';
 
-async function getBestOfTheYear(page, retries = 5) {
+async function getBestOfTheYear(page, retries = 10) {
     const currentYear = new Date().getFullYear();
     try {
-        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&key=a359d27af5fc427c87fb3af6dd0b91b4&ordering=-rating&dates=${currentYear}-01-01,${currentYear}-12-31`);
+        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}&ordering=-rating&dates=${currentYear}-01-01,${currentYear}-12-31`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

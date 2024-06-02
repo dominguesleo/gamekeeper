@@ -5,13 +5,13 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { Aside } from "@/components/aside/Aside";
 import {ButtonClassic} from '@/components/button/ButtonClassic';
 
-async function getGamesNextWeek(page, retries = 5) {
+async function getGamesNextWeek(page, retries = 10) {
     const nextWeekStart = new Date();
     nextWeekStart.setDate(nextWeekStart.getDate() + (8 - nextWeekStart.getDay())); // Lunes de la próxima semana
     const nextWeekEnd = new Date(nextWeekStart);
     nextWeekEnd.setDate(nextWeekEnd.getDate() + 6); // Domingo de la próxima semana
     try {
-        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&key=a359d27af5fc427c87fb3af6dd0b91b4&dates=${nextWeekStart.toLocaleDateString('en-CA',{year: 'numeric', month: '2-digit', day: '2-digit'})},${nextWeekEnd.toLocaleDateString('en-CA',{year: 'numeric', month: '2-digit', day: '2-digit'})}`);
+        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}&dates=${nextWeekStart.toLocaleDateString('en-CA',{year: 'numeric', month: '2-digit', day: '2-digit'})},${nextWeekEnd.toLocaleDateString('en-CA',{year: 'numeric', month: '2-digit', day: '2-digit'})}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

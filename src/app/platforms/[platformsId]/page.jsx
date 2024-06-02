@@ -5,9 +5,9 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { Aside } from "@/components/aside/Aside";
 import { ButtonClassic } from '@/components/button/ButtonClassic';
 
-async function getPlatformGames(page, platformsId, retries = 5) {
+async function getPlatformGames(page, platformsId, retries = 10) {
     try {
-        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&platforms=${platformsId}&key=a359d27af5fc427c87fb3af6dd0b91b4`);
+        const response = await fetch(`https://api.rawg.io/api/games?page=${page}&platforms=${platformsId}&key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -24,9 +24,9 @@ async function getPlatformGames(page, platformsId, retries = 5) {
     }
 }
 
-async function getPlatformName(platformsId, retries = 5) {
+async function getPlatformName(platformsId, retries = 10) {
     try {
-        const response = await fetch(`https://api.rawg.io/api/platforms/${platformsId}?key=a359d27af5fc427c87fb3af6dd0b91b4`);
+        const response = await fetch(`https://api.rawg.io/api/platforms/${platformsId}?key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

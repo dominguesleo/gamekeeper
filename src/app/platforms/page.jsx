@@ -5,9 +5,9 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { Aside } from "@/components/aside/Aside";
 import { ButtonClassic } from '@/components/button/ButtonClassic';
 
-async function getPlatforms(page, retries = 5) {
+async function getPlatforms(page, retries = 10) {
     try {
-        const response = await fetch(`https://api.rawg.io/api/platforms?page=${page}&page_size=80&key=a359d27af5fc427c87fb3af6dd0b91b4`);
+        const response = await fetch(`https://api.rawg.io/api/platforms?page=${page}&page_size=80&key=${process.env.NEXT_PUBLIC_RAWG_TOKEN}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
