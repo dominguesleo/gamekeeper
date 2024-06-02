@@ -5,7 +5,7 @@ const connectDB = async () => {
     if (mongoose.connections[0].readyState) {
         return;
     }
-    await mongoose.connect('mongodb://localhost:27017/gamekeeper');
+    await mongoose.connect(`${process.env.MONGO_URL}`);
 };
 
 export { connectDB };
