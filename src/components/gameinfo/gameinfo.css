@@ -1,0 +1,30 @@
+.game-info-divisor {
+    display: flex;
+}
+
+.game-info-container {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.game-info-container .game-info-contain {
+    margin-bottom: 10px;
+}
+
+.game-info-container .game-info-contain h5{
+    margin-bottom: 5px;
+}
+
+.game-info-container .game-info-contain a{
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.game-info-container .game-info-contain .disabled-link{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.game-info-container .game-info-contain span{
+    font-size: 15px;
+}

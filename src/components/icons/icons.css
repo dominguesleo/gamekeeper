@@ -1,0 +1,5 @@
+.icon {
+    width: 18px;
+    fill: var(--50);
+    box-sizing: content-box;
+}

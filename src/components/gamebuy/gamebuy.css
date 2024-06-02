@@ -1,0 +1,60 @@
+.game-buy-container {
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+.game-buy .btn {
+    width: 11em;
+    height: 2.5em;
+    margin: 0.5em 0.5em 0.25em 0;
+    background: var(--800);
+    color: var(--100);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.game-buy .btn-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-buy .btn-contain span {
+    margin-right: 5px;
+}
+
+.game-buy button:hover {
+    color: var(--800);
+}
+
+.game-buy button:after {
+    content: "";
+    background: var(--50);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.game-buy .btn:hover span{
+    color: var(--800);
+}
+
+.game-buy .btn:hover .icon {
+    fill: var(--800);
+}
+
+.game-buy button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}

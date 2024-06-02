@@ -1,0 +1,20 @@
+
+aside ul li a {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.aside-list li a {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.aside-list-title{
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+

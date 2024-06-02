@@ -1,0 +1,50 @@
+.btn-classic {
+    width: 11em;
+    height: 2.5em;
+    margin: 0.5em 0.5em 0.25em 0;
+    background: var(--800);
+    color: var(--100);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-classic:hover {
+    color: var(--800);
+}
+
+.btn-classic:after {
+    content: "";
+    background: var(--50);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.btn-classic:hover span{
+    color: var(--800);
+}
+
+.btn-classic:hover .icon {
+    fill: var(--800);
+}
+
+.btn-classic:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.btn-classic:disabled {
+    color: var(--400);
+    cursor: not-allowed;
+  }

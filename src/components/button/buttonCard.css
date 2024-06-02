@@ -1,0 +1,49 @@
+.cssbuttons-io-button {
+    background: var(--600);
+    color: var(--50);
+    padding-left: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 0.9em;
+    border: none;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em var(--600);
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .buttonIcon {
+    background: var(--50);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em var(--500);
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .buttonIcon {
+    width: calc(100% - 0.614em);
+}
+
+.cssbuttons-io-button .buttonIcon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: var(--500);
+}
+
+.cssbuttons-io-button:hover .buttonIcon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .buttonIcon {
+    transform: scale(0.95);
+}

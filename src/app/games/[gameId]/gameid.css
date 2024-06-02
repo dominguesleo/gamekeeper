@@ -1,0 +1,65 @@
+.game-details {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.game-details > div {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.game-details h2 {
+    margin-bottom: 10px;
+}
+
+.game-details p {
+    font-size: 15px;
+}
+
+.game-first-block {
+    display: flex;
+}
+
+.game-first-block h1 {
+    font-size: 40px;
+}
+
+.game-first-block > div {
+    width: 50%;
+    margin: 0 10px
+}
+
+
+.game-first-block .game-platform-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.game-platform-icon > * {
+    padding-right: 5px;
+}
+
+.game-details-rating {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.game-details-rating h4{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+@media (max-width: 1300px) {
+    .game-first-block {
+        display: block;
+    }
+    .game-first-block > div {
+        width: 100%;
+    }
+    .game-details h2 {
+        margin-top: 20px;
+    }
+}

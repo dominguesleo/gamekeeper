@@ -1,0 +1,71 @@
+.game-status-container{
+    display: flex;
+    align-items: center;
+}
+
+.game-status {
+    position: relative;
+    max-width: 420px;
+    height: 36px;
+    background-color: var(--50);
+    border: 2px solid var(--800);
+    border-radius: 34px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 10px 20px var(--950);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.game-status .option {
+    width: 80.5px;
+    height: 28px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.game-status .input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    appearance: none;
+    cursor: pointer;
+}
+
+.game-status .btn {
+    width: 100%;
+    height: 100%;
+    background-color: var(--50);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-status .span {
+    color: var(--800);
+}
+
+.game-status .input:checked+.btn {
+    background-color: var(--800);
+}
+
+.game-status .input:checked+.btn .span {
+    color: var(--50);
+}
+
+.game-status .input:not(:checked):hover+.btn {
+    background-color: var(--400);
+}
+
+.game-status .input:not(:checked):hover+.btn .span {
+    color: var(--50);
+}
+
+.game-status .option:last-child {
+    margin-right: 8px;
+}

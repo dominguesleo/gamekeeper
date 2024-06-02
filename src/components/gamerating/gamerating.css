@@ -1,0 +1,85 @@
+.game-rating {
+    height: 50px;
+    background-color: var(--50);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.overlayDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 80%;
+}
+
+.majorRating{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.majorRating > div {
+    display: flex;
+    align-items: center;
+}
+
+.majorRating > div > h3 {
+    margin-right: 5px;
+}
+
+.exceptional{
+    background-color: var(--green);
+}
+
+.recommended{
+    background-color: var(--600);
+}
+
+.meh{
+    background-color: var(--yellow);
+}
+
+.skip{
+    background-color: var(--red);
+}
+
+.game-rating-info{
+    margin-top: 10px;
+    padding: 0 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rating-info-container{
+    display: flex;
+    align-items: center;
+}
+
+.rating-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.color-exceptional{
+    background-color: var(--green);
+}
+
+.color-recommended{
+    background-color: var(--600);
+}
+
+.color-meh{
+    background-color: var(--yellow);
+}
+
+.color-skip{
+    background-color: var(--red);
+}
