@@ -3,19 +3,23 @@ import { League_Gothic } from "next/font/google";
 import Link from 'next/link'
 import { UserButton, useUser } from '@clerk/nextjs'
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import './navbar.css'
 
 const leagueGothic = League_Gothic({
-  weights: [400],
-  styles: ['normal'],
+  variants: [
+    {
+      weight: '400',
+      style: 'normal',
+    },
+  ],
   subsets: ['latin'],
 });
 
 export const Navbar = () => {
   const [inputValue, setInputValue] = useState('');
   const router = useRouter();
-  const user = useUser();
+  const { isSignedIn } = useUser();
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -32,17 +36,19 @@ export const Navbar = () => {
       <Link href='/' className={leagueGothic.className}>GameKeeper</Link>
       <input
         className="input"
-        placeholder="Search"
+        placeholder="Buscar"
         value={inputValue}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />
-      {user.isSignedIn
-        ? <UserButton style={{ fontSize: '2em' }} />
-        : <div className="sign">
-          <Link href='/sign-in' className="link">SING IN</Link>
-          <Link href='/sign-up' className="link">SIGN UP</Link>
-        </div>}
+      {isSignedIn ? (
+        <UserButton style={{ fontSize: '2em' }} />
+      ) : (
+        <div className="sign">
+          <Link href='/sign-in' className="link">INICIAR SESIÓN</Link>
+          <Link href='/sign-up' className="link">REGISTRARSE</Link>
+        </div>
+      )}
     </div>
   )
 }
