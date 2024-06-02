@@ -65,7 +65,7 @@
 
 
 
-@media (max-width: 650px) {
+@media (max-width: 725px) {
     .navbar {
         flex-direction: column;
     }
@@ -82,11 +82,14 @@
         flex-grow: 0;
         width: 100%;
         margin-right: 10px;
-
+        margin-left: 10px;
     }
     .navbar .sign {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .user-clerk{
+        margin-right: 10px;
     }
 }

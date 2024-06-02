@@ -63,3 +63,12 @@
         margin-top: 20px;
     }
 }
+
+@media (max-width: 725px) {
+    .game-details > div {
+        margin-left: 0px;
+    }
+    .game-first-block > div {
+        margin: 0 0px
+    }
+  }

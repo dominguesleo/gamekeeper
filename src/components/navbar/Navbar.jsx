@@ -34,7 +34,7 @@ export const Navbar = () => {
   return (
     <div className='navbar'>
       <Link href='/' className={leagueGothic.className}>GameKeeper</Link>
-      <div  className="input-container">
+      <div className="input-container">
         <input
           className="input"
           placeholder="Search"
@@ -43,7 +43,10 @@ export const Navbar = () => {
           onKeyDown={handleKeyDown}
           style={{ flexGrow: 1 }}
         />
-        {isSignedIn && <UserButton className="user-clerk"/>}
+        <div className="user-clerk">
+          {isSignedIn && <UserButton />}
+        </div>
+
       </div>
       {!isSignedIn && (
         <div className="sign">
