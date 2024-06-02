@@ -36,7 +36,7 @@ export const Navbar = () => {
       <Link href='/' className={leagueGothic.className}>GameKeeper</Link>
       <input
         className="input"
-        placeholder="Buscar"
+        placeholder="Search"
         value={inputValue}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
@@ -45,8 +45,8 @@ export const Navbar = () => {
         <UserButton style={{ fontSize: '2em' }} />
       ) : (
         <div className="sign">
-          <Link href='/sign-in' className="link">INICIAR SESIÓN</Link>
-          <Link href='/sign-up' className="link">REGISTRARSE</Link>
+          <Link href='/sign-in' className="link">SING IN</Link>
+          <Link href='/sign-up' className="link">SIGN UP</Link>
         </div>
       )}
     </div>

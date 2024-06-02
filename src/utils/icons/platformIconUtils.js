@@ -2,11 +2,11 @@
 import { AndroidIcon, AppleIcon, LinuxIcon, NintendoIcon, PlayStationIcon, WindowsIcon, XboxIcon} from '@/components/icons/PlatformIcon'
 
 const platformIcons = {
-    playstation: <PlayStationIcon />,
+    playstation: <PlayStationIcon/>,
     xbox: <XboxIcon />,
     nintendo: <NintendoIcon />,
-    android: <AndroidIcon />,
-    windows: <WindowsIcon />,
+    android: <AndroidIcon key={1}/>,
+    windows: <WindowsIcon key={2}/>,
     pc: <WindowsIcon />,
     applemacintosh: <AppleIcon />,
     linux: <LinuxIcon />,

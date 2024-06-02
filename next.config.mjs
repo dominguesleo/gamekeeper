@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['media.rawg.io', 'salehriaz.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.rawg.io',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'salehriaz.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
     },
 };
 

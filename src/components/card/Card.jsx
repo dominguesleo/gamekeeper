@@ -67,7 +67,8 @@ export const Card = ({ game, baseUrl }) => {
                         {game.stores && (
                             <div className='result'>
                                 <div className='cardIcons'>
-                                    {game.stores.map((store) => (getStoreIcon(store.store.name)))}
+                                    {game.stores.slice(0, 6).map((store) => getStoreIcon(store.store.name))}
+                                    {game.stores.length > 6 && <span>+</span>}
                                 </div>
                             </div>
                         )}

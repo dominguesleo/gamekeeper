@@ -3,15 +3,15 @@ import { AppStoreIcon, EpicGamesIcon, GogIcon, NintendoIcon, PlayStationIcon, Pl
 const storeIcons = {
     playstationstore: <PlayStationIcon />,
     xboxstore: <XboxIcon />,
-    nintendo: <NintendoIcon />,
-    nintendostore: <NintendoIcon />,
+    nintendo: <NintendoIcon key={1}/>,
+    nintendostore: <NintendoIcon key={2}/>,
     steam: <SteamIcon />,
     epicgames: <EpicGamesIcon />,
     gog: <GogIcon />,
-    apple: <AppStoreIcon />,
-    appstore: <AppStoreIcon />,
-    android: <PlayStoreIcon />,
-    googleplay: <PlayStoreIcon />,
+    apple: <AppStoreIcon key={3}/>,
+    appstore: <AppStoreIcon key={4}/>,
+    android: <PlayStoreIcon key={5}/>,
+    googleplay: <PlayStoreIcon key={6}/>,
 };
 
 export const getStoreIcon = (store) => {
