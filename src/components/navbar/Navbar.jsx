@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { UserButton, useUser } from '@clerk/nextjs'
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import './Navbar.css'
+import './navbar.css'
 
 const leagueGothic = League_Gothic({
   weights: [400],
