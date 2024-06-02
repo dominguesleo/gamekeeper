@@ -41,7 +41,7 @@ export const Aside = () => {
                 <li key="6.5"><Link href="/genres/3">Adventure</Link></li>
                 <li key="6.6"><Link href="/genres/7">Puzzle</Link></li>
                 <li key="6.7"><Link href="/genres/1">Racing</Link></li>
-                <li key="6.8"><Link href="/genres/15">sport</Link></li>
+                <li key="6.8"><Link href="/genres/15">Sport</Link></li>
           </ul>
         </li>
       </ul>

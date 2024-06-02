@@ -1,5 +1,5 @@
 
-aside ul li a {
+ul li a {
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
@@ -18,3 +18,18 @@ aside ul li a {
     margin-left: 10px;
 }
 
+@media (max-width: 650px) {
+    ul {
+        text-align: center;
+    }
+    ul > li {
+        display: inline-block;
+        margin-right: 10px;/* Ajusta este valor según tus necesidades */
+    }
+    .aside-list {
+        display: none;
+    }
+    ul li a {
+        margin-top: 0;
+    }
+}

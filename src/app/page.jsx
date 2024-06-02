@@ -15,7 +15,6 @@ async function getGames(page, retries = 10) {
         return data;
     } catch (error) {
         if (retries > 0) {
-            console.log(`Retrying... (${retries})`);
             return getGames(page, retries - 1);
         } else {
             console.error('Failed to fetch games:', error);

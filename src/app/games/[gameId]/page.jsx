@@ -34,8 +34,8 @@ async function getGameData(id, retries = 10) {
 
     const gameUrl = `${baseUrl}?key=${apiKey}`;
     const screenshotsUrl = `${baseUrl}/screenshots?key=${apiKey}`;
-    const editionsUrl = `${baseUrl}/additions?key=${apiKey}`;
-    const sameSeriesUrl = `${baseUrl}/game-series?key=${apiKey}`;
+    const editionsUrl = `${baseUrl}/additions?key=${apiKey}&size=50`;
+    const sameSeriesUrl = `${baseUrl}/game-series?key=${apiKey}&size=50`;
 
     const [data, img, editions, sameSeries] = await Promise.all([
         fetchWithRetries(gameUrl, retries),

@@ -136,3 +136,17 @@ section {
   cursor: default;
   color: grey;
 }
+
+@media (max-width: 650px) {
+  main {
+      flex-direction: column;
+  }
+  aside {
+      width: 100%;
+      padding-top: 15px;
+  }
+  .page-tittle {
+    margin-left: 0px;
+    text-align: center;
+  }
+}
