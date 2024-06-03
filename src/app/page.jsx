@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { Card } from "@/components/card/Card";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Aside } from "@/components/aside/Aside";

@@ -24,7 +24,7 @@ async function getGenres(page, retries = 10) {
     }
 }
 
-export default function Home() {
+export default function GenresPage() {
     const [genres, setGenres] = useState([]);
     const [page, setPage] = useState(1);
     const [next, setNext] = useState(null);

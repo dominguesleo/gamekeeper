@@ -6,7 +6,7 @@ import { Aside } from "@/components/aside/Aside";
 import { useUser } from '@clerk/nextjs'
 import { GameStatusLibrary } from '@/components/gamestatus/GameStatusLibrary'
 
-export default function Home() {
+export default function MyLibraryPage() {
     const { user, isSignedIn } = useUser();
     const [games, setGames] = useState([]);
     const [gamesId, setGamesId] = useState([]);

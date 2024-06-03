@@ -24,7 +24,7 @@ export const CarouselGameDetail = ({img}) => {
             >
                 {img.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <Image src={image.image} width={image.width} height={image.height} alt="img" />
+                        <Image src={image.image} width={image.width} height={image.height} alt="img-game" />
                     </SwiperSlide>
                 ))}
             </Swiper>

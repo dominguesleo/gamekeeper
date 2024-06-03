@@ -54,6 +54,7 @@
     margin-top: 8px;
     margin-bottom: 8px;
     color: var(--background);
+    justify-content: center;
 }
 
 .navbar .input:hover,
@@ -62,8 +63,6 @@
     box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
     background-color: var(--50);
 }
-
-
 
 @media (max-width: 725px) {
     .navbar {
@@ -76,6 +75,7 @@
     }
     .navbar .input-container {
         width: 100%;
+        justify-content: center;
         margin-bottom: 15px;
     }
     .navbar .input {
@@ -88,8 +88,5 @@
         width: 100%;
         display: flex;
         justify-content: center;
-    }
-    .user-clerk{
-        margin-right: 10px;
     }
 }

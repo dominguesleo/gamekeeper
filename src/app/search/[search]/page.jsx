@@ -24,7 +24,7 @@ async function getGames(page, search, retries = 10) {
     }
 }
 
-export default function Home({ params }) {
+export default function SearchPage({ params }) {
     const [games, setGames] = useState([]);
     const [page, setPage] = useState(1);
     const [next, setNext] = useState(null);

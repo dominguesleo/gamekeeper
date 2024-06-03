@@ -43,7 +43,7 @@ export const Navbar = () => {
           onKeyDown={handleKeyDown}
           style={{ flexGrow: 1 }}
         />
-        <div className="user-clerk">
+        <div className="user-clerk" style={isSignedIn ? { marginRight: '10px' } : {}}>
           {isSignedIn && <UserButton />}
         </div>
 

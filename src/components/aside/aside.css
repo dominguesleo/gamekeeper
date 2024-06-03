@@ -1,35 +1,90 @@
+.aside-desktop {
+    display: none;
+}
 
-ul li a {
+.aside-desktop ul li a {
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
     margin-top: 10px;
 }
 
-.aside-list li a {
+.aside-desktop .aside-list li a {
     font-size: 14px;
     font-weight: normal;
     margin-left: 10px;
 }
 
-.aside-list-title{
+.aside-desktop .aside-list-title {
     font-size: 14px;
     font-weight: normal;
     margin-left: 10px;
 }
 
-@media (max-width: 725px) {
-    ul {
-        text-align: center;
+.aside-mobile {
+    display: block;
+    margin-top: 5px;
+}
+
+.aside-mobile li a {
+    text-decoration: none;
+    color: var(--900);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.aside-mobile nav {
+    min-width: 250px;
+    background: var(--50);
+    margin: 0 auto;
+}
+
+.aside-mobile span {
+    padding: 12px;
+    background: var(--900);
+    color: var(--50);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+.aside-mobile span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.aside-mobile .slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+.aside-mobile .slide li {
+    padding: 8px;
+    display: block;
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touch:checked+.slide {
+    height: auto;
+}
+
+@media (min-width: 725px) {
+    .aside-desktop {
+        display: block;
     }
-    ul > li {
-        display: inline-block;
-        margin-right: 10px;/* Ajusta este valor según tus necesidades */
-    }
-    .aside-list {
+
+    .aside-mobile {
         display: none;
-    }
-    ul li a {
-        margin-top: 0;
     }
 }

@@ -24,7 +24,7 @@ async function getPlatforms(page, retries = 10) {
     }
 }
 
-export default function Home() {
+export default function PlatformsPage() {
     const [platforms, setPlatforms] = useState([]);
     const [page, setPage] = useState(1);
     const [next, setNext] = useState(null);
