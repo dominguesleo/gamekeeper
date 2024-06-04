@@ -65,6 +65,12 @@
     margin-right: 8px;
 }
 
+@media (max-width: 800px) {
+    .game-status-library {
+        margin: 10px auto;
+    }
+}
+
 @media (max-width: 500px) {
     .game-status-library {
         max-width: 320px;
