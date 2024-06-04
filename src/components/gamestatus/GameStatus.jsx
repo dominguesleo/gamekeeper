@@ -8,7 +8,7 @@ export function GameStatus({ gameId }) {
     const { user, isSignedIn } = useUser();
     const [selectedStatus, setSelectedStatus] = useState(null);
     const statusName = ["owned", "toplay", "playing", "beaten", "dropped"]
-    
+
     useEffect(() => {
         const fetchStatus = async () => {
             if (user && user.id) {
