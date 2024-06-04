@@ -46,7 +46,6 @@ export const Navbar = () => {
         <div className="user-clerk" style={isSignedIn ? { marginRight: '10px' } : {}}>
           {isSignedIn && <UserButton />}
         </div>
-
       </div>
       {!isSignedIn && (
         <div className="sign">

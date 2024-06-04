@@ -53,6 +53,7 @@ export const Aside = () => {
                 <input type="checkbox" id="touch" />
                 <ul className="slide">
                     <li><Link href="/">All Games</Link></li>
+                    {user.isSignedIn && <li key="2"><Link href="/my-library">My Library</Link></li>}
                     <li><Link href="/releases/this-week">This week</Link></li>
                     <li><Link href="/releases/next-week">Next week</Link></li>
                     <li><Link href="/releases/last-30-days">Last 30 days</Link></li>
