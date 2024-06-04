@@ -49,7 +49,7 @@ export const Navbar = () => {
       </div>
       {!isSignedIn && (
         <div className="sign">
-          <Link href='/sign-in' className="link">SING IN</Link>
+          <Link href='/sign-in' className="link">LOGIN</Link>
           <Link href='/sign-up' className="link">SIGN UP</Link>
         </div>
       )}

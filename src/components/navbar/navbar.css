@@ -89,4 +89,7 @@
         display: flex;
         justify-content: center;
     }
+    .sign .link:last-child {
+        margin-right: 0;
+    }
 }
