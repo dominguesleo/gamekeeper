@@ -55,6 +55,10 @@
     content: "+";
 }
 
+.aside-mobile span.expanded::after {
+    content: "-";
+}
+
 .aside-mobile .slide {
     clear: both;
     width: 100%;

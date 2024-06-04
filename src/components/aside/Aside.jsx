@@ -1,10 +1,16 @@
 "use client";
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs'
+import { useState } from 'react';
 import './aside.css';
 
 export const Aside = () => {
   const user = useUser();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpansion = () => {
+      setIsExpanded(!isExpanded);
+  };
   return (
     <>
       <div className='aside-desktop'>
@@ -49,7 +55,7 @@ export const Aside = () => {
       </div>
       <div className='aside-mobile'>
             <nav>
-                <label htmlFor="touch"><span>Menu</span></label>
+                <label htmlFor="touch"><span onClick={toggleExpansion} className={isExpanded ? 'expanded' : ''}>Menu</span></label>
                 <input type="checkbox" id="touch" />
                 <ul className="slide">
                     <li><Link href="/">All Games</Link></li>
