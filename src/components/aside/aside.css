@@ -83,12 +83,18 @@
     height: auto;
 }
 
-@media (min-width: 725px) {
+@media (min-width: 800px) {
     .aside-desktop {
         display: block;
     }
-
     .aside-mobile {
         display: none;
+    }
+    .aside-mobile .slide li:first-child {
+        padding-top: 16px;
+    }
+
+    .aside-mobile .slide li:last-child {
+        padding-bottom: 16px;
     }
 }

@@ -137,7 +137,7 @@ section {
   color: grey;
 }
 
-@media (max-width: 725px) {
+@media (max-width: 800px) {
   main {
       flex-direction: column;
   }
