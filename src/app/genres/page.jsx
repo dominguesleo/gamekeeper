@@ -33,7 +33,7 @@ export default function GenresPage() {
         const fetchGenres = async () => {
             const data = await getGenres(page);
             setGenres(oldGenres => {
-                const newGenres = data.results.filter(newGenre => !oldGenres.some(newGenre => newGenre.id === newGenre.id));
+                const newGenres = data.results.filter(newGenre => !oldGenres.some(oldGenre => oldGenre.id === newGenre.id));
                 return [...oldGenres, ...newGenres];
             });
             setNext(data.next);

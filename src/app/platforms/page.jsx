@@ -33,7 +33,7 @@ export default function PlatformsPage() {
         const fetchPlatforms = async () => {
             const data = await getPlatforms(page);
             setPlatforms(oldPlatforms => {
-                const newPlatforms = data.results.filter(newPlatform => !oldPlatforms.some(newPlatform => newPlatform.id === newPlatform.id));
+                const newPlatforms = data.results.filter(newPlatform => !oldPlatforms.some(oldPlatform => oldPlatform.id === newPlatform.id));
                 return [...oldPlatforms, ...newPlatforms];
             });
             setNext(data.next);
