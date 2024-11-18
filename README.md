@@ -30,7 +30,7 @@ GameKeeper is a digital video game library that allows you to stay up to date wi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/gamekeeper.git
+git clone https://github.com/dominguesleo/gamekeeper.git
 cd gamekeeper
 ```
 
